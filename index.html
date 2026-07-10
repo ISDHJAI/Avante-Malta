@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Malta — Avante | CASTDIM</title>
+<meta name="description" content="Modelo Malta, departamentos Avante por CASTDIM. Desde $1,599,000.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Audiowide&display=swap" rel="stylesheet">
+<link rel="icon" href="images/icon-piramide.svg" type="image/svg+xml">
+<style>
+  :root{
+    --gold:#fecb47;
+    --gray:#797673;
+    --gray-light:#b7b6b3;
+    --avante-dark:#a47213;
+    --avante:#e19902;
+    --avante-deep:#8a5f13;
+    --black:#0b0b0b;
+    --off-white:#faf9f7;
+    --ink:#1c1a17;
+    --radius:18px;
+    --ease:cubic-bezier(.22,.8,.28,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--off-white);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{text-decoration:none;color:inherit;}
+  .audiowide{font-family:'Audiowide',sans-serif;}
+  .container{max-width:520px;margin:0 auto;padding:0 22px;}
+  .eyebrow{
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--avante);
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    overflow:hidden;
+    background:var(--black);
+  }
+  .hero-media{
+    position:absolute;inset:0;
+    z-index:0;
+  }
+  .hero-media img{
+    width:100%;height:100%;object-fit:cover;
+    animation:heroZoom 16s var(--ease) forwards;
+  }
+  @keyframes heroZoom{from{transform:scale(1.12);}to{transform:scale(1);}}
+  .hero-media::after{
+    content:"";
+    position:absolute;inset:0;
+    background:
+      linear-gradient(180deg, rgba(11,11,11,.55) 0%, rgba(11,11,11,.05) 26%, rgba(11,11,11,.15) 55%, rgba(11,11,11,.92) 100%);
+  }
+  .hero-top{
+    position:absolute;top:0;left:0;right:0;
+    z-index:2;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 22px 0;
+  }
+  .hero-top .castdim-mark img{height:34px;width:auto;opacity:.95;filter:drop-shadow(0 1px 6px rgba(0,0,0,.5));}
+  .avante-badge{
+    background:rgba(255,255,255,.96);
+    border-radius:14px;
+    padding:8px 18px;
+    box-shadow:0 16px 34px -14px rgba(0,0,0,.6);
+  }
+  .avante-badge img{height:44px;width:auto;display:block;}
+  .hero-ticker-wrap{
+    position:relative;z-index:2;
+    overflow:hidden;
+    padding:16px 0 6px;
+    mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  }
+  .hero-ticker{
+    display:flex;align-items:center;gap:16px;white-space:nowrap;
+    animation:ticker 14s linear infinite;
+    width:max-content;
+  }
+  .hero-ticker span{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    font-weight:800;
+  }
+  .hero-ticker span.dot{
+    color:var(--gray-light);
+    font-size:9px;
+    font-weight:400;
+    letter-spacing:0;
+  }
+  @keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  .hero-body{
+    position:relative;z-index:2;
+    padding:6px 22px 34px;
+  }
+  .hero-avante{
+    display:flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:8px;
+  }
+  .hero-avante svg{width:16px;height:16px;flex:0 0 auto;}
+  .hero-title{
+    font-family:'Montserrat',sans-serif;
+    font-weight:900;
+    font-size:clamp(56px,20vw,84px);
+    line-height:.88;
+    color:#fff;
+    letter-spacing:-.01em;
+  }
+  .hero-sub{
+    margin-top:10px;
+    color:var(--gray-light);
+    font-size:14.5px;
+    font-weight:500;
+    letter-spacing:.01em;
+  }
+  .hero-sub b{color:var(--gold);font-weight:700;}
+  .hero-price{
+    margin-top:20px;
+    display:inline-flex;
+    flex-direction:column;
+    gap:2px;
+    background:linear-gradient(135deg, var(--avante), var(--avante-dark));
+    padding:14px 18px;
+    border-radius:14px;
+    box-shadow:0 14px 30px -10px rgba(164,114,19,.55);
+  }
+  .hero-price .from{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:700;}
+  .hero-price .range{font-size:26px;font-weight:800;color:#fff;letter-spacing:-.01em;}
+  .scroll-cue{
+    position:absolute;bottom:16px;left:50%;
+    transform:translateX(-50%);
+    z-index:2;
+    width:22px;height:34px;
+    border:1.5px solid rgba(255,255,255,.55);
+    border-radius:14px;
+  }
+  .scroll-cue::before{
+    content:"";
+    position:absolute;top:6px;left:50%;
+    width:3px;height:7px;
+    background:var(--gold);
+    border-radius:3px;
+    transform:translateX(-50%);
+    animation:cue 1.6s ease-in-out infinite;
+  }
+  @keyframes cue{0%{opacity:1;top:6px;}70%{opacity:0;top:16px;}100%{opacity:0;top:6px;}}
+
+  /* ===== STATS STRIP ===== */
+  .stats{
+    background:var(--black);
+    padding:38px 0 34px;
+    position:relative;
+  }
+  .stats::before{
+    content:"";
+    position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--gold),var(--avante),var(--avante-dark));
+  }
+  .stats-scroll{
+    display:flex;gap:12px;overflow-x:auto;
+    padding:0 22px;
+    scroll-snap-type:x mandatory;
+    -ms-overflow-style:none;scrollbar-width:none;
+  }
+  .stats-scroll::-webkit-scrollbar{display:none;}
+  .stat-card{
+    scroll-snap-align:start;
+    flex:0 0 auto;
+    min-width:128px;
+    background:#161513;
+    border:1px solid #2a2722;
+    border-radius:16px;
+    padding:18px 16px;
+  }
+  .stat-card .num{
+    font-size:26px;font-weight:800;color:var(--gold);
+    line-height:1;
+  }
+  .stat-card .num small{font-size:13px;font-weight:700;color:var(--gray-light);}
+  .stat-card .label{
+    margin-top:8px;font-size:11px;color:var(--gray-light);
+    letter-spacing:.04em;
+  }
+
+  /* ===== SECTION HEADERS ===== */
+  .section{padding:56px 0;}
+  .section-head{margin-bottom:26px;}
+  .section-title{
+    font-size:28px;font-weight:800;
+    letter-spacing:-.01em;
+    line-height:1.15;
+    margin-top:8px;
+  }
+  .section-title .accent{color:var(--avante);}
+  .section-desc{
+    margin-top:12px;font-size:14.5px;line-height:1.6;color:var(--gray);
+  }
+
+  /* ===== DIVIDER (triangle motif) ===== */
+  .tri-divider{
+    display:flex;align-items:center;gap:10px;
+    margin:0 0 18px;
+  }
+  .tri-divider svg{width:32px;height:14px;flex:0 0 auto;}
+  .tri-divider .line{height:1px;flex:1;background:linear-gradient(90deg,var(--gray-light),transparent);}
+
+  /* ===== ACCORDION (Ficha técnica) ===== */
+  .accordion{
+    background:#fff;border-radius:var(--radius);
+    border:1px solid #ece9e3;
+    overflow:hidden;
+    box-shadow:0 18px 40px -28px rgba(0,0,0,.3);
+  }
+  .acc-item{border-bottom:1px solid #eee;}
+  .acc-item:last-child{border-bottom:none;}
+  .acc-head{
+    width:100%;display:flex;align-items:center;justify-content:space-between;
+    gap:12px;background:none;border:none;cursor:pointer;
+    padding:17px 18px;text-align:left;
+    font-family:'Montserrat',sans-serif;
+    font-size:14.5px;font-weight:700;color:var(--ink);
+  }
+  .acc-chevron{width:18px;height:18px;flex:0 0 auto;color:var(--avante-dark);transition:transform .35s var(--ease);}
+  .acc-item.open .acc-chevron{transform:rotate(180deg);}
+  .acc-body{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);}
+  .acc-inner{padding:0 18px 18px;}
+  .spec-sub{
+    font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--avante-dark);margin:14px 0 8px;
+  }
+  .spec-sub:first-child{margin-top:0;}
+  .spec-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .spec-list li{
+    font-size:13.5px;line-height:1.5;color:#4b4946;
+    padding-left:14px;position:relative;
+  }
+  .spec-list li::before{
+    content:"";position:absolute;left:0;top:7px;
+    width:5px;height:5px;background:var(--gold);
+    clip-path:polygon(50% 0%,0% 100%,100% 100%);
+  }
+  .spec-list li b{color:var(--ink);}
+
+  /* ===== PLANO ===== */
+  .plano-card{
+    background:#fff;border:1px solid #ece9e3;border-radius:var(--radius);
+    padding:14px 14px 16px;margin-bottom:20px;
+    box-shadow:0 18px 40px -28px rgba(0,0,0,.35);
+    opacity:0;transform:translateY(24px);
+    transition:opacity .7s var(--ease), transform .7s var(--ease);
+  }
+  .plano-card.in{opacity:1;transform:translateY(0);}
+  .plano-card img{border-radius:10px;width:100%;}
+  .plano-cap{
+    margin-top:10px;font-size:11.5px;color:var(--gray);text-align:center;
+    letter-spacing:.02em;font-weight:600;
+  }
+
+  /* ===== NIVELES CARDS ===== */
+  .niveles{display:flex;flex-direction:column;gap:16px;}
+  .nivel-card{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:22px 20px;
+    border:1px solid #ece9e3;
+    box-shadow:0 18px 40px -28px rgba(0,0,0,.35);
+    opacity:0;transform:translateY(24px);
+    transition:opacity .7s var(--ease), transform .7s var(--ease), box-shadow .4s var(--ease);
+  }
+  .nivel-card.in{opacity:1;transform:translateY(0);}
+  .nivel-card:hover{box-shadow:0 24px 50px -24px rgba(0,0,0,.4);}
+  .nivel-head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    padding-bottom:14px;margin-bottom:14px;
+    border-bottom:1px solid #eee;
+  }
+  .nivel-head .tag{
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    font-weight:800;color:var(--avante-dark);
+  }
+  .nivel-head .m2{font-size:20px;font-weight:800;}
+  .nivel-head .m2 span{font-size:12px;color:var(--gray);font-weight:600;}
+  .nivel-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .nivel-list li{
+    display:flex;align-items:flex-start;gap:10px;
+    font-size:14px;color:var(--ink);line-height:1.4;
+  }
+  .nivel-list li::before{
+    content:"";
+    flex:0 0 auto;
+    width:7px;height:7px;
+    margin-top:5px;
+    background:var(--gold);
+    clip-path:polygon(50% 0%,0% 100%,100% 100%);
+  }
+
+  /* ===== AMENITIES ICON GRID ===== */
+  .amenities-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }
+  .amenity{
+    background:#fff;border:1px solid #ece9e3;border-radius:14px;
+    padding:16px 8px 12px;text-align:center;
+    opacity:0;transform:translateY(16px);
+    transition:opacity .6s var(--ease),transform .6s var(--ease),box-shadow .4s var(--ease);
+  }
+  .amenity.in{opacity:1;transform:translateY(0);}
+  .amenity:hover{box-shadow:0 16px 32px -20px rgba(0,0,0,.35);}
+  .amenity svg{width:30px;height:30px;margin:0 auto 8px;stroke:var(--avante-dark);}
+  .amenity .n{font-size:15px;font-weight:800;color:var(--ink);}
+  .amenity .l{font-size:10px;color:var(--gray);letter-spacing:.03em;margin-top:2px;}
+
+  /* ===== PROMO BANNER ===== */
+  .promo-banner{
+    background:linear-gradient(135deg,var(--avante),var(--avante-dark) 70%);
+    border-radius:22px;
+    padding:28px 24px;
+    position:relative;overflow:hidden;
+    color:#fff;
+  }
+  .promo-banner::after{
+    content:"";position:absolute;right:-40px;top:-40px;
+    width:160px;height:160px;border-radius:50%;
+    background:rgba(255,255,255,.08);
+  }
+  .promo-banner .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#fff2d6;}
+  .promo-banner .price-range{
+    font-size:clamp(26px,8vw,32px);font-weight:800;margin-top:8px;letter-spacing:-.01em;
+  }
+  .promo-banner .price-range small{font-size:14px;font-weight:600;opacity:.85;display:block;margin-top:2px;}
+  .promo-banner .fine{margin-top:12px;font-size:11px;color:#fff2d6;opacity:.85;}
+
+  /* ===== GALLERY ===== */
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
+  }
+  .g-item{
+    position:relative;border-radius:14px;overflow:hidden;
+    aspect-ratio:1/1;background:#eee7d8;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+    transition:box-shadow .4s var(--ease);
+  }
+  .g-item:hover{box-shadow:0 20px 44px -20px rgba(0,0,0,.4);}
+  .g-item img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .6s var(--ease);}
+  .g-item:hover img{transform:scale(1.08);}
+  .g-item .ph{
+    display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--avante-dark);opacity:.65;
+  }
+  .g-item .ph svg{width:26px;height:26px;stroke:var(--avante-dark);}
+  .g-item .ph span{font-size:10px;font-weight:700;letter-spacing:.03em;text-align:center;padding:0 8px;}
+  .g-item .num{
+    position:absolute;top:8px;left:8px;
+    background:rgba(11,11,11,.55);color:#fff;
+    font-size:10px;font-weight:800;
+    width:20px;height:20px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    z-index:2;
+  }
+  .g-item .cap{
+    position:absolute;bottom:0;left:0;right:0;
+    padding:8px 10px 7px;
+    background:linear-gradient(0deg,rgba(11,11,11,.75),transparent);
+    color:#fff;font-size:11px;font-weight:700;z-index:2;
+  }
+
+  /* Lightbox */
+  .lightbox{
+    position:fixed;inset:0;z-index:999;
+    background:rgba(10,9,7,.96);
+    display:none;align-items:center;justify-content:center;
+    padding:20px;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:100%;max-height:80vh;border-radius:10px;}
+  .lightbox .close{
+    position:absolute;top:22px;right:22px;color:#fff;font-size:28px;
+    width:40px;height:40px;display:flex;align-items:center;justify-content:center;
+  }
+  .lightbox .cap{color:var(--gray-light);margin-top:14px;font-size:13px;text-align:center;}
+
+  /* ===== FINANCING ===== */
+  .financing{
+    background:var(--gray-light);
+    border-radius:var(--radius);
+    padding:26px 22px;
+    text-align:left;
+  }
+  .fin-list{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;
+  }
+  .fin-pill{
+    background:#fff;border-radius:999px;
+    padding:7px 13px;font-size:12px;font-weight:700;color:var(--ink);
+    border:1px solid rgba(0,0,0,.06);
+  }
+
+  /* ===== UBICACIÓN ===== */
+  .location-card{
+    background:#fff;border:1px solid #ece9e3;border-radius:var(--radius);
+    padding:30px 24px;text-align:center;
+    box-shadow:0 18px 40px -28px rgba(0,0,0,.3);
+  }
+  .location-address{display:flex;align-items:center;justify-content:center;gap:7px;margin:6px 0 20px;}
+  .location-address svg{width:15px;height:15px;flex:none;fill:var(--avante-dark);}
+  .location-address span{font-size:13.5px;font-weight:600;color:var(--gray);}
+  .btn-maps{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--black);color:#fff;font-weight:800;font-size:13px;
+    padding:14px 26px;border-radius:999px;
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+  }
+  .btn-maps:hover{transform:translateY(-3px);box-shadow:0 20px 40px -18px rgba(0,0,0,.5);}
+  .btn-maps:active{transform:scale(.96);}
+  .btn-maps svg{width:15px;height:15px;fill:var(--gold);}
+
+  /* ===== CTA ===== */
+  .cta{
+    background:var(--black);
+    padding:52px 0 60px;
+    text-align:center;
+    position:relative;
+  }
+  .cta::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--avante-dark),var(--avante),var(--gold));
+  }
+  .cta .eyebrow{color:var(--gold);}
+  .cta h2{
+    color:#fff;font-size:26px;font-weight:800;margin-top:10px;line-height:1.2;
+  }
+  .cta p{color:var(--gray-light);font-size:14px;margin-top:10px;line-height:1.6;}
+  .cta-btn{
+    display:inline-flex;align-items:center;gap:10px;
+    margin-top:24px;
+    background:linear-gradient(135deg,var(--avante),var(--avante-dark));
+    color:#fff;font-weight:800;font-size:14.5px;
+    padding:15px 26px;border-radius:999px;
+    box-shadow:0 16px 34px -12px rgba(164,114,19,.6);
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+  }
+  .cta-btn:hover{transform:translateY(-3px);box-shadow:0 22px 42px -12px rgba(164,114,19,.7);}
+  .cta-btn:active{transform:scale(.96);}
+  .cta-btn svg{width:18px;height:18px;}
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:#0b0b0b;padding:30px 0 26px;text-align:center;
+    border-top:1px solid #1c1a17;
+  }
+  .footer-logos{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;}
+  .footer-logos .developed-by{
+    display:flex;align-items:center;gap:7px;
+    font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+    font-weight:700;color:#8a8781;
+  }
+  .footer-logos .developed-by img{height:14px;width:auto;opacity:.9;}
+  .footer-logos .avante-lockup img{height:40px;width:auto;}
+  footer .tag{margin-top:12px;color:#6b6863;font-size:11px;letter-spacing:.1em;text-transform:uppercase;}
+
+  /* ===== INLINE AGENDAR CTA (reutilizable) ===== */
+  .btn-agendar-wrap{
+    display:flex;flex-direction:column;align-items:center;gap:12px;
+    margin-top:34px;text-align:center;
+  }
+  .btn-agendar-wrap p{font-size:12.5px;color:var(--gray);font-weight:500;max-width:340px;}
+  .btn-agendar{
+    display:inline-flex;align-items:center;gap:9px;
+    background:linear-gradient(135deg,var(--avante),var(--avante-dark));
+    color:#fff;font-weight:800;font-size:13.5px;
+    padding:14px 28px;border-radius:999px;
+    box-shadow:0 16px 34px -14px rgba(164,114,19,.6);
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+  }
+  .btn-agendar:hover{transform:translateY(-3px);box-shadow:0 22px 40px -14px rgba(164,114,19,.7);}
+  .btn-agendar:active{transform:scale(.96);}
+  .btn-agendar svg{width:16px;height:16px;fill:#fff;}
+
+  /* Floating WhatsApp */
+  .wa-float{
+    position:fixed;bottom:20px;right:18px;z-index:50;
+    width:56px;height:56px;border-radius:50%;
+    background:linear-gradient(135deg,var(--avante),var(--avante-dark));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 14px 30px -8px rgba(164,114,19,.65);
+    animation:waPulse 2.6s ease-in-out infinite;
+    transition:transform .3s var(--ease);
+  }
+  .wa-float:hover{transform:scale(1.08);}
+  .wa-float svg{width:26px;height:26px;fill:#fff;}
+  @keyframes waPulse{
+    0%,100%{box-shadow:0 14px 30px -8px rgba(164,114,19,.65),0 0 0 0 rgba(225,153,2,.4);}
+    50%{box-shadow:0 14px 30px -8px rgba(164,114,19,.65),0 0 0 10px rgba(225,153,2,0);}
+  }
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;}
+  }
+
+  @media (min-width:600px){
+    .container{max-width:560px;}
+    .amenities-grid{grid-template-columns:repeat(3,1fr);}
+  }
+
+  /* ===== TABLET / DESKTOP ===== */
+  @media (min-width:900px){
+    body{font-size:16px;}
+    .container{max-width:960px;padding:0 40px;}
+
+    /* Hero */
+    .hero{min-height:100vh;}
+    .hero-top{padding:36px 40px 0;}
+    .hero-top .castdim-mark img{height:46px;}
+    .avante-badge{padding:12px 26px;border-radius:16px;}
+    .avante-badge img{height:62px;}
+    .hero-ticker span{font-size:13px;}
+    .hero-body{max-width:960px;margin:0 auto;padding:10px 40px 64px;}
+    .hero-title{font-size:clamp(90px,11vw,150px);}
+    .hero-sub{font-size:17px;}
+    .hero-price{padding:20px 26px;}
+    .hero-price .range{font-size:34px;}
+    .hero-price .from{font-size:12px;}
+
+    /* Stats */
+    .stats-scroll{
+      max-width:960px;margin:0 auto;padding:0 40px;
+      flex-wrap:wrap;justify-content:center;overflow:visible;
+    }
+    .stat-card{flex:1 1 160px;min-width:160px;}
+
+    /* Sections */
+    .section{padding:84px 0;}
+    .section-title{font-size:36px;}
+    .section-desc{font-size:16px;max-width:620px;}
+
+    /* Distribución: plano + niveles side by side */
+    #distribucion .container{
+      display:grid;grid-template-columns:1fr 1fr;column-gap:56px;
+    }
+    #distribucion .section-head{grid-column:1/-1;}
+    #distribucion .plano-card{margin-bottom:0;}
+    #distribucion .niveles{gap:20px;}
+
+    /* Amenidades */
+    .amenities-grid{grid-template-columns:repeat(6,1fr);gap:16px;}
+    .amenity{padding:22px 12px 16px;}
+
+    /* Ficha técnica accordion, centered narrower column */
+    .accordion{max-width:760px;margin:0 auto;}
+
+    /* Promo banner */
+    .promo-banner{max-width:760px;margin:0 auto;padding:40px 48px;}
+    .promo-banner .price-range{font-size:40px;}
+
+    /* Galería */
+    .gallery-grid{grid-template-columns:repeat(4,1fr);gap:14px;}
+
+    /* Financiamiento */
+    .financing{max-width:760px;margin:0 auto;padding:36px 40px;}
+
+    /* CTA */
+    .cta h2{font-size:34px;}
+    .cta p{max-width:480px;margin-left:auto;margin-right:auto;}
+
+    /* Footer */
+    .footer-logos .avante-lockup img{height:46px;}
+  }
+
+  @media (min-width:1280px){
+    .container{max-width:1120px;}
+    #distribucion .container{column-gap:80px;}
+    .hero-body,.hero-top{max-width:1120px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-media">
+    <img src="images/hero-familia.jpg" alt="Familia frente a departamentos Avante CASTDIM">
+  </div>
+
+  <div class="hero-top">
+    <div class="castdim-mark">
+      <img src="images/logo-castdim-white.svg" alt="CASTDIM">
+    </div>
+    <div class="avante-badge">
+      <img src="images/logo-avante-color.png" alt="Avante Departamentos">
+    </div>
+  </div>
+
+  <div class="hero-ticker-wrap">
+    <div class="hero-ticker">
+      <span>Preventa</span>
+      <span class="dot">✦</span>
+      <span>Preventa</span>
+      <span class="dot">✦</span>
+      <span>Preventa</span>
+      <span class="dot">✦</span>
+      <span>Preventa</span>
+      <span class="dot">✦</span>
+      <span>Preventa</span>
+      <span class="dot">✦</span>
+      <span>Preventa</span>
+      <span class="dot">✦</span>
+      <span>Preventa</span>
+      <span class="dot">✦</span>
+      <span>Preventa</span>
+      <span class="dot">✦</span>
+    </div>
+  </div>
+
+  <div class="hero-body">
+    <div class="hero-avante">
+      <svg viewBox="319 357 208 95"><path fill="var(--gold)" d="M319.49,451.17l145.88-46.68-145.88-47.27v-47.26l207.73,69.15v51.64l-207.73,67.98v-47.56Z"/></svg>
+      Avante
+    </div>
+    <div class="hero-title">MALTA</div>
+    <div class="hero-sub">Departamentos <b>Avante</b> · Modelo residencial CASTDIM</div>
+
+    <div class="hero-price">
+      <span class="from">Precio desde</span>
+      <span class="range">$1,599,000</span>
+    </div>
+  </div>
+
+  <div class="scroll-cue"></div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats">
+  <div class="stats-scroll">
+    <div class="stat-card"><div class="num">90.94<small> m²</small></div><div class="label">Construcción Nivel 2</div></div>
+    <div class="stat-card"><div class="num">84.43<small> m²</small></div><div class="label">Construcción Nivel 3</div></div>
+    <div class="stat-card"><div class="num">2</div><div class="label">Niveles disponibles</div></div>
+    <div class="stat-card"><div class="num">2</div><div class="label">Recámaras</div></div>
+    <div class="stat-card"><div class="num">2</div><div class="label">Baños completos</div></div>
+  </div>
+  <div class="container">
+    <div class="btn-agendar-wrap reveal">
+      <p style="color:#b7b6b3;">¿Te gustó lo que viste hasta ahora?</p>
+      <a href="https://wa.me/524448608497?text=Hola%2C%20me%20interesa%20el%20modelo%20Malta%20de%20Avante%2C%20%C2%BFcu%C3%A1ndo%20puedo%20agendar%20una%20visita%3F" class="btn-agendar">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.36-.5.06-1.1.09-1.77-.11-.4-.12-.92-.3-1.58-.58-2.79-1.2-4.61-4-4.75-4.19-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.26-.28.56-.35.75-.35h.53c.17 0 .4-.06.62.48.24.58.81 2 .88 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.5-.15.15-.3.31-.13.6.17.29.75 1.25 1.62 2.03 1.11 1 2.05 1.32 2.34 1.47.29.15.46.13.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.27.1 1.68.8 1.97.95.29.15.48.22.55.34.07.13.07.71-.17 1.39Z"/></svg>
+        Agendar visita
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DISTRIBUCIÓN ===== -->
+<section class="section" id="distribucion">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Distribución</span>
+      <h2 class="section-title">Un nivel para cada<br><span class="accent">forma de vivir</span></h2>
+      <p class="section-desc">Malta se ofrece en dos niveles independientes dentro del edificio Avante: el Nivel 2, con balcón y área de lavado techados, y el Nivel 3, con espacios abiertos y mayor cajón de estacionamiento.</p>
+    </div>
+
+    <div class="plano-card reveal">
+      <img src="images/planta-depto.jpg" alt="Plano arquitectónico Departamento Malta">
+      <div class="plano-cap">Planta arquitectónica oficial · Depto. 101/102 · 90.94 m²</div>
+    </div>
+
+    <div class="niveles">
+      <div class="nivel-card reveal">
+        <div class="nivel-head">
+          <span class="tag">Nivel 2</span>
+          <span class="m2">90.94 <span>m² constr.</span></span>
+        </div>
+        <ul class="nivel-list">
+          <li>2 habitaciones (principal con baño completo)</li>
+          <li>2 baños completos</li>
+          <li>Área de lavado techada</li>
+          <li>Balcón techado</li>
+          <li>1 cajón de estacionamiento</li>
+        </ul>
+      </div>
+
+      <div class="nivel-card reveal">
+        <div class="nivel-head">
+          <span class="tag">Nivel 3</span>
+          <span class="m2">84.43 <span>m² constr.</span></span>
+        </div>
+        <ul class="nivel-list">
+          <li>2 habitaciones (principal con baño completo)</li>
+          <li>2 baños completos</li>
+          <li>Área de lavado abierta</li>
+          <li>Balcón abierto</li>
+          <li>2 cajones de estacionamiento</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-agendar-wrap reveal">
+      <p>Conoce esta distribución en persona.</p>
+      <a href="https://wa.me/524448608497?text=Hola%2C%20me%20interesa%20el%20modelo%20Malta%20de%20Avante%2C%20%C2%BFcu%C3%A1ndo%20puedo%20agendar%20una%20visita%3F" class="btn-agendar">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.36-.5.06-1.1.09-1.77-.11-.4-.12-.92-.3-1.58-.58-2.79-1.2-4.61-4-4.75-4.19-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.26-.28.56-.35.75-.35h.53c.17 0 .4-.06.62.48.24.58.81 2 .88 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.5-.15.15-.3.31-.13.6.17.29.75 1.25 1.62 2.03 1.11 1 2.05 1.32 2.34 1.47.29.15.46.13.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.27.1 1.68.8 1.97.95.29.15.48.22.55.34.07.13.07.71-.17 1.39Z"/></svg>
+        Agendar visita
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AMENIDADES ===== -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="tri-divider reveal">
+      <svg viewBox="290 340 490 190"><path fill="var(--avante)" d="M319.49,451.17l145.88-46.68-145.88-47.27v-47.26l207.73,69.15v51.64l-207.73,67.98v-47.56Z"/><path fill="var(--avante-dark)" d="M750.49,357.82l-145.88,46.68,145.88,47.27v47.26l-207.73-69.15v-51.64l207.73-67.98v47.56Z"/></svg>
+      <div class="line"></div>
+    </div>
+    <div class="section-head reveal" style="margin-bottom:20px;">
+      <span class="eyebrow">Equipamiento</span>
+      <h2 class="section-title" style="font-size:22px;">Pensado para amueblar<br>desde el día uno</h2>
+    </div>
+
+    <div class="amenities-grid">
+      <div class="amenity reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v6M20 13v6M4 13a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M6 11V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M4 17h16"/></svg>
+        <div class="n">Sala</div><div class="l">Living</div>
+      </div>
+      <div class="amenity reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="2.4"/><path d="M5 12.4V19M19 12.4V19M9 12.4V19M15 12.4V19"/></svg>
+        <div class="n">Comedor</div><div class="l">Mesa y sillas</div>
+      </div>
+      <div class="amenity reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M12 4v16M8 9v.01M16 9v.01"/></svg>
+        <div class="n">Clóset</div><div class="l">Vestidor</div>
+      </div>
+      <div class="amenity reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="1.6"/><path d="M8 6.5h.01M11 6.5h.01"/></svg>
+        <div class="n">Lavado</div><div class="l">Área lavadora</div>
+      </div>
+      <div class="amenity reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v5M3 18v2M21 18v2M3 13V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1"/></svg>
+        <div class="n">Recámaras</div><div class="l">2 habitaciones</div>
+      </div>
+      <div class="amenity reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3ZM4 12V7a2 2 0 0 1 3-1.7M7 19v2M17 19v2"/></svg>
+        <div class="n">Baños</div><div class="l">2 completos</div>
+      </div>
+    </div>
+
+    <div class="btn-agendar-wrap reveal">
+      <p>¿Ya te imaginaste viviendo aquí?</p>
+      <a href="https://wa.me/524448608497?text=Hola%2C%20me%20interesa%20el%20modelo%20Malta%20de%20Avante%2C%20%C2%BFcu%C3%A1ndo%20puedo%20agendar%20una%20visita%3F" class="btn-agendar">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.36-.5.06-1.1.09-1.77-.11-.4-.12-.92-.3-1.58-.58-2.79-1.2-4.61-4-4.75-4.19-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.26-.28.56-.35.75-.35h.53c.17 0 .4-.06.62.48.24.58.81 2 .88 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.5-.15.15-.3.31-.13.6.17.29.75 1.25 1.62 2.03 1.11 1 2.05 1.32 2.34 1.47.29.15.46.13.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.27.1 1.68.8 1.97.95.29.15.48.22.55.34.07.13.07.71-.17 1.39Z"/></svg>
+        Agendar visita
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FICHA TÉCNICA ===== -->
+<section class="section" id="ficha-tecnica" style="padding-top:0;">
+  <div class="container">
+    <div class="tri-divider reveal">
+      <svg viewBox="290 340 490 190"><path fill="var(--avante)" d="M319.49,451.17l145.88-46.68-145.88-47.27v-47.26l207.73,69.15v51.64l-207.73,67.98v-47.56Z"/><path fill="var(--avante-dark)" d="M750.49,357.82l-145.88,46.68,145.88,47.27v47.26l-207.73-69.15v-51.64l207.73-67.98v47.56Z"/></svg>
+      <div class="line"></div>
+    </div>
+    <div class="section-head reveal">
+      <span class="eyebrow">Ficha técnica</span>
+      <h2 class="section-title">Especificaciones<br><span class="accent">y acabados</span></h2>
+      <p class="section-desc">Materiales, instalaciones y equipamiento oficiales del prototipo Malta, desarrollo Sotavento · Departamentos Avante.</p>
+    </div>
+
+    <div class="accordion reveal">
+
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span>Sistema constructivo</span>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-inner">
+          <ul class="spec-list">
+            <li>Muro a base de block de concreto de 15×20×40 cm</li>
+            <li>Cimentación a base de zapata corrida con firme de concreto</li>
+            <li>Entrelosa y losa de azotea a base de losa maciza de concreto de 12 cm de espesor</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span>Instalaciones</span>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-inner">
+          <p class="spec-sub">Eléctrica</p>
+          <ul class="spec-list">
+            <li>Instalación general a 110V</li>
+            <li>Canalización vacía para aire acondicionado en las 2 habitaciones (preparación para 220V, no incluye cableado)</li>
+          </ul>
+          <p class="spec-sub">Hidráulica</p>
+          <ul class="spec-list">
+            <li>Sistema de presión constante</li>
+            <li>Cisterna con capacidad de 1,200 lts</li>
+            <li>Bomba sumergible e hidroneumático de 24 lts</li>
+            <li>Válvula reductora de presión</li>
+          </ul>
+          <p class="spec-sub">Gas</p>
+          <ul class="spec-list">
+            <li>Preparación para gas natural en horno, calentador y secadora</li>
+            <li>Calentador de gas de 2 servicios</li>
+          </ul>
+          <p class="spec-sub">Voz y datos</p>
+          <ul class="spec-list">
+            <li>Registro canalizado para TV e internet, con salidas listas en cada punto</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span>Acabados</span>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-inner">
+          <ul class="spec-list">
+            <li><b>Muros:</b> aplanado fino de yeso, 1.5 cm de espesor</li>
+            <li><b>Pisos:</b> loseta cerámica formato 60×60 cm</li>
+            <li><b>Baños:</b> muros de regadera con loseta cerámica 30×60 cm</li>
+            <li><b>Iluminación:</b> luminarias tipo spot</li>
+            <li><b>Carpintería:</b> melamina nacional</li>
+            <li><b>Cancelería:</b> aluminio blanco perfil 2", cristal claro 3 mm en ventanas y 6 mm en canceles</li>
+            <li><b>Herrería:</b> portón de acceso vehicular manual, con preparación para automatizar a futuro</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span>Equipamiento</span>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-inner">
+          <p class="spec-sub">Cocina</p>
+          <ul class="spec-list">
+            <li>Mueble a base de melamina nacional con cubierta de fórmica</li>
+            <li>Estufa de gas de 80 cm y extractor</li>
+          </ul>
+          <p class="spec-sub">Baños</p>
+          <ul class="spec-list">
+            <li>Mueble de lavamanos de porcelana y monomando cromado</li>
+            <li>Inodoro de porcelana one piece</li>
+            <li>Regadera de plato plano de techo</li>
+            <li>Accesorios: toallero, gancho de toalla y dispensador de papel</li>
+          </ul>
+          <p class="spec-sub">Área de lavado</p>
+          <ul class="spec-list">
+            <li>Instalación hidrosanitaria y eléctrica lista para lavadora y secadora</li>
+            <li>Calentador de gas para 2 servicios simultáneos</li>
+            <li>Preparación para calentador solar (no incluido)</li>
+            <li>Lavadero individual de granito</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span>Cochera y estacionamiento</span>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-inner">
+          <ul class="spec-list">
+            <li>Portón automático de acceso, función manual</li>
+            <li>Incluye 1 cajón de estacionamiento de 2.5 × 5 m</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-head" type="button">
+          <span>Áreas generales y servicios</span>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body"><div class="acc-inner">
+          <ul class="spec-list">
+            <li>Acceso peatonal y circulaciones verticales con escaleras a base de material</li>
+            <li>Escotilla de acceso a azotea</li>
+            <li>Bodega de mantenimiento bajo escaleras</li>
+          </ul>
+          <p class="spec-sub">Servicios de la zona</p>
+          <div class="fin-list">
+            <span class="fin-pill">Agua</span>
+            <span class="fin-pill">Luz</span>
+            <span class="fin-pill">Gas natural</span>
+            <span class="fin-pill">Telecomunicaciones</span>
+          </div>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMO ===== -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="promo-banner reveal">
+      <span class="k">Preventa · Precio de lanzamiento</span>
+      <div class="price-range">Desde $1,599,000
+        <small>Precio final según nivel y disponibilidad</small>
+      </div>
+      <div class="fine">Precio de lanzamiento sujeto a cambios sin previo aviso. Aplica en unidades seleccionadas.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERÍA ===== -->
+<section class="section" id="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Galería</span>
+      <h2 class="section-title">Recorre Malta<br><span class="accent">por espacio</span></h2>
+      <p class="section-desc">Explora cada área. En cuanto nos compartas las fotografías del departamento, se colocan directamente en su número correspondiente.</p>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="g-item reveal" data-cap="Sala">
+        <span class="num">1</span><span class="cap">Sala</span>
+        <img src="images/sala.jpg" alt="Sala Malta">
+      </div>
+      <div class="g-item reveal" data-cap="Comedor y cocina">
+        <span class="num">2</span><span class="cap">Comedor y cocina</span>
+        <img src="images/comedor-cocina.jpg" alt="Comedor y cocina Malta">
+      </div>
+      <div class="g-item reveal" data-cap="Recámara principal">
+        <span class="num">3</span><span class="cap">Recámara principal</span>
+        <img src="images/recamara-principal.jpg" alt="Recámara principal Malta">
+      </div>
+      <div class="g-item reveal" data-cap="Balcón">
+        <span class="num">4</span><span class="cap">Balcón</span>
+        <img src="images/balcon.jpg" alt="Balcón Malta">
+      </div>
+      <div class="g-item reveal" data-cap="Recámara secundaria">
+        <span class="num">5</span><span class="cap">Recámara secundaria</span>
+        <img src="images/recamara-2.jpg" alt="Recámara secundaria Malta">
+      </div>
+      <div class="g-item reveal" data-cap="Baño completo">
+        <span class="num">6</span><span class="cap">Baño completo</span>
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3Z"/></svg><span>Próximamente</span></div>
+      </div>
+      <div class="g-item reveal" data-cap="Baño secundario">
+        <span class="num">7</span><span class="cap">Baño secundario</span>
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3Z"/></svg><span>Próximamente</span></div>
+      </div>
+      <div class="g-item reveal" data-cap="Área de lavado">
+        <span class="num">8</span><span class="cap">Área de lavado</span>
+        <img src="images/cuarto-servicio.jpg" alt="Área de lavado Malta">
+      </div>
+      <div class="g-item reveal" data-cap="Estacionamiento">
+        <span class="num">9</span><span class="cap">Estacionamiento</span>
+        <img src="images/estacionamiento.jpg" alt="Estacionamiento Malta">
+      </div>
+      <div class="g-item reveal" data-cap="Fachada">
+        <span class="num">10</span><span class="cap">Fachada</span>
+        <img src="images/hero-familia.jpg" alt="Fachada Malta">
+      </div>
+    </div>
+
+    <div class="btn-agendar-wrap reveal">
+      <p>¿Ya recorriste toda la galería? Es momento de verla en persona.</p>
+      <a href="https://wa.me/524448608497?text=Hola%2C%20me%20interesa%20el%20modelo%20Malta%20de%20Avante%2C%20%C2%BFcu%C3%A1ndo%20puedo%20agendar%20una%20visita%3F" class="btn-agendar">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.36-.5.06-1.1.09-1.77-.11-.4-.12-.92-.3-1.58-.58-2.79-1.2-4.61-4-4.75-4.19-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.26-.28.56-.35.75-.35h.53c.17 0 .4-.06.62.48.24.58.81 2 .88 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.5-.15.15-.3.31-.13.6.17.29.75 1.25 1.62 2.03 1.11 1 2.05 1.32 2.34 1.47.29.15.46.13.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.27.1 1.68.8 1.97.95.29.15.48.22.55.34.07.13.07.71-.17 1.39Z"/></svg>
+        Agendar visita
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINANCIAMIENTO ===== -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="financing reveal">
+      <span class="eyebrow" style="color:var(--avante-dark);">Financiamiento</span>
+      <h2 class="section-title" style="font-size:21px;margin-top:8px;">Aceptamos todo tipo de crédito</h2>
+      <p style="font-size:13.5px;color:#4b4946;margin-top:8px;line-height:1.55;">Trabajamos con Infonavit, Cofinavit, Fovissste, Unamos, crédito BBVA y créditos bancarios tradicionales para que Malta sea tuya de la forma más conveniente.</p>
+      <div class="fin-list">
+        <span class="fin-pill">Infonavit</span>
+        <span class="fin-pill">Cofinavit</span>
+        <span class="fin-pill">Fovissste</span>
+        <span class="fin-pill">Unamos</span>
+        <span class="fin-pill">Crédito BBVA</span>
+        <span class="fin-pill">Bancario tradicional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UBICACIÓN ===== -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="tri-divider reveal">
+      <svg viewBox="290 340 490 190"><path fill="var(--avante)" d="M319.49,451.17l145.88-46.68-145.88-47.27v-47.26l207.73,69.15v51.64l-207.73,67.98v-47.56Z"/><path fill="var(--avante-dark)" d="M750.49,357.82l-145.88,46.68,145.88,47.27v47.26l-207.73-69.15v-51.64l207.73-67.98v47.56Z"/></svg>
+      <div class="line"></div>
+    </div>
+    <div class="section-head reveal">
+      <span class="eyebrow">Ubicación</span>
+      <h2 class="section-title">Un desarrollo<br><span class="accent">Sotavento</span></h2>
+      <p class="section-desc">Avante Malta forma parte del desarrollo Sotavento, en Villa de Pozos, San Luis Potosí. Conoce la ubicación exacta antes de tu visita.</p>
+    </div>
+    <div class="location-card reveal">
+      <img src="images/logo-avante-color.png" alt="Avante Departamentos" style="height:44px;width:auto;margin:0 auto 16px;">
+      <div class="location-address">
+        <svg viewBox="0 0 24 24"><path d="M12 2c-4.42 0-8 3.58-8 8 0 5.5 8 12 8 12s8-6.5 8-12c0-4.42-3.58-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>
+        <span>Villa de Pozos, San Luis Potosí</span>
+      </div>
+      <a href="https://www.google.com/maps/d/viewer?mid=1dy0wRx990wioCMlmN-q7i5gS-0xeZYw&usp=sharing" target="_blank" rel="noopener" class="btn-maps">
+        <svg viewBox="0 0 24 24"><path d="M12 2c-4.42 0-8 3.58-8 8 0 5.5 8 12 8 12s8-6.5 8-12c0-4.42-3.58-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>
+        Ver ubicación en el mapa
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="container">
+    <span class="eyebrow">Agenda tu visita</span>
+    <h2>¿Listo para conocer<br>Malta en persona?</h2>
+    <p>Recorre el departamento, resuelve tus dudas de crédito y agenda tu visita hoy mismo.</p>
+    <a href="https://wa.me/524448608497?text=Hola%2C%20me%20interesa%20el%20modelo%20Malta%20de%20Avante%2C%20%C2%BFcu%C3%A1ndo%20puedo%20agendar%20una%20visita%3F" target="_blank" class="cta-btn">
+      <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.36-.5.06-1.1.09-1.77-.11-.4-.12-.92-.3-1.58-.58-2.79-1.2-4.61-4-4.75-4.19-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.26-.28.56-.35.75-.35h.53c.17 0 .4-.06.62.48.24.58.81 2 .88 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.5-.15.15-.3.31-.13.6.17.29.75 1.25 1.62 2.03 1.11 1 2.05 1.32 2.34 1.47.29.15.46.13.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.27.1 1.68.8 1.97.95.29.15.48.22.55.34.07.13.07.71-.17 1.39Z"/></svg>
+      Agendar visita
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logos">
+    <div class="developed-by">
+      <img src="images/logo-castdim-white.svg" alt="CASTDIM">
+      <span>Un proyecto CASTDIM</span>
+    </div>
+    <div class="avante-lockup">
+      <img src="images/logo-avante.svg" alt="Avante" style="filter:brightness(0) saturate(100%) invert(1);">
+    </div>
+  </div>
+  <div class="tag">Sueños Hechos Propiedad</div>
+</footer>
+
+<a href="https://wa.me/524448608497?text=Hola%2C%20me%20interesa%20el%20modelo%20Malta%20de%20Avante%2C%20%C2%BFcu%C3%A1ndo%20puedo%20agendar%20una%20visita%3F" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.36a9.9 9.9 0 0 0 4.62 1.15h.01c5.46 0 9.9-4.45 9.9-9.9C21.96 6.45 17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.36-.5.06-1.1.09-1.77-.11-.4-.12-.92-.3-1.58-.58-2.79-1.2-4.61-4-4.75-4.19-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.05.98-2.33.26-.28.56-.35.75-.35h.53c.17 0 .4-.06.62.48.24.58.81 2 .88 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.5-.15.15-.3.31-.13.6.17.29.75 1.25 1.62 2.03 1.11 1 2.05 1.32 2.34 1.47.29.15.46.13.63-.07.17-.2.72-.85.92-1.14.19-.29.39-.24.65-.14.27.1 1.68.8 1.97.95.29.15.48.22.55.34.07.13.07.71-.17 1.39Z"/></svg>
+</a>
+
+<div class="lightbox" id="lightbox">
+  <span class="close" id="lbClose">✕</span>
+  <div>
+    <img id="lbImg" src="" alt="">
+    <div class="cap" id="lbCap"></div>
+  </div>
+</div>
+
+<script>
+  // Accordion (Ficha técnica)
+  document.querySelectorAll('.acc-item').forEach(item=>{
+    const head = item.querySelector('.acc-head');
+    const body = item.querySelector('.acc-body');
+    head.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      // close others
+      document.querySelectorAll('.acc-item.open').forEach(other=>{
+        if(other!==item){
+          other.classList.remove('open');
+          other.querySelector('.acc-body').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('open');
+        body.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal, .nivel-card, .amenity');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  // Gallery items (all shown together, no level filtering)
+  const gItems = document.querySelectorAll('.g-item');
+
+  // Lightbox (activates once real images are added, data-full attr)
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCap = document.getElementById('lbCap');
+  gItems.forEach(item=>{
+    item.addEventListener('click', ()=>{
+      const img = item.querySelector('img');
+      if(!img) return; // no photo yet
+      lbImg.src = img.src;
+      lbCap.textContent = item.dataset.cap || '';
+      lightbox.classList.add('open');
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click', ()=>lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) lightbox.classList.remove('open'); });
+</script>
+</body>
+</html>
